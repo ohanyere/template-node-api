@@ -14,10 +14,11 @@
 - `__SERVICE_NAME__`
 - `__TEAM_NAME__`
 - `__OWNER_EMAIL__`
-- `__DOCKERHUB_NAMESPACE__`
 - `__ENVIRONMENT__`
 - `__COST_CENTER__`
 
 ## Platform Standards
 
 Platform standards are owned in `ohanyere/platform-core`.
+Docker Hub registry details are managed by the platform. Developers do not provide a Docker Hub namespace or registry secrets.
+Generated services publish images to `kuberpull/<service-name>`.

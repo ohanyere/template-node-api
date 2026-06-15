@@ -7,11 +7,11 @@ This repository is intended to be used as a GitHub Template Repository. The IDP 
 - `__SERVICE_NAME__`
 - `__TEAM_NAME__`
 - `__OWNER_EMAIL__`
-- `__DOCKERHUB_NAMESPACE__`
 - `__ENVIRONMENT__`
 - `__COST_CENTER__`
 
 Platform standards are referenced from `ohanyere/platform-core`, including CI reusable workflows for build/sign, scan, and policy checks.
+Docker Hub registry details are managed by the platform. Generated services publish images to `kuberpull/<service-name>`.
 
 ## What You Get
 
@@ -56,6 +56,8 @@ make validate
 `validate-k8s` renders Kustomize locally with `kubectl kustomize` or `kustomize` when available. It does not require a live Kubernetes cluster.
 
 ## Docker
+
+The Docker Hub namespace is a platform default. Developers do not provide registry details for generated services.
 
 ```bash
 docker build -t kuberpull/__SERVICE_NAME__:local .

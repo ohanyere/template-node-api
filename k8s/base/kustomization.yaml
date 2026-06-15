@@ -23,6 +23,6 @@ labels:
       platform.ohanyere.io/template: template-node-api
       finops.ohanyere.io/cost-center: __COST_CENTER__
 images:
-  - name: __DOCKERHUB_NAMESPACE__/__SERVICE_NAME__
+  - name: kuberpull/__SERVICE_NAME__
     newName: kuberpull/__SERVICE_NAME__
     newTag: latest

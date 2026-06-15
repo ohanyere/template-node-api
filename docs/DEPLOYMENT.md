@@ -6,7 +6,8 @@ CI is defined in `.github/workflows/ci.yaml` and calls platform standards from `
 - `ohanyere/platform-core/.github/workflows/reusable-scan.yaml@main`
 - `ohanyere/platform-core/.github/workflows/reusable-policy-check.yaml@main`
 
-Images are published under the Docker Hub namespace `kuberpull`.
+Docker Hub registry details are managed by the platform. Developers do not provide a Docker Hub namespace or registry configuration.
+Generated services publish images to `kuberpull/<service-name>`.
 
 ## Environments
 

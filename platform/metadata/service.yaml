@@ -5,9 +5,9 @@ language: typescript
 framework: express
 runtime: nodejs20
 docker:
-  namespace: __DOCKERHUB_NAMESPACE__
+  namespace: kuberpull
   defaultNamespace: kuberpull
-  image: __DOCKERHUB_NAMESPACE__/__SERVICE_NAME__
+  image: kuberpull/__SERVICE_NAME__
 deployment:
   strategy: argo-rollouts-canary
   environments:
