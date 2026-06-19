@@ -49,11 +49,7 @@ jobs:
     needs: build-sign
     uses: ohanyere/platform-core/.github/workflows/reusable-scan.yaml@main
     with:
-      service_name: __SERVICE_NAME__
-      dockerhub_namespace: kuberpull
-      image_tag: ${{ github.sha }}
-      dockerfile_path: ./Dockerfile
-      context_path: .
+      image_ref: kuberpull/__SERVICE_NAME__:${{ github.sha }}
     secrets: inherit
 
   policy-check:
@@ -61,6 +57,5 @@ jobs:
     needs: scan
     uses: ohanyere/platform-core/.github/workflows/reusable-policy-check.yaml@main
     with:
-      manifests_path: k8s/overlays/prod
-      service_name: __SERVICE_NAME__
+      manifest_path: k8s/overlays/prod
     secrets: inherit
