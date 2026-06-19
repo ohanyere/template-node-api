@@ -42,7 +42,9 @@ jobs:
       image_tag: ${{ github.sha }}
       dockerfile_path: ./Dockerfile
       context_path: .
-    secrets: inherit
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
   scan:
     name: scan
