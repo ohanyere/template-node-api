@@ -12,6 +12,10 @@ RUN npm prune --omit=dev
 FROM node:20-bookworm-slim AS runtime
 ENV NODE_ENV=production
 WORKDIR /app
+RUN apt-get update \
+  && apt-get upgrade -y \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 RUN groupadd --system --gid 10001 nodeapi \
   && useradd --system --uid 10001 --gid nodeapi --home-dir /app nodeapi
 COPY --from=build --chown=nodeapi:nodeapi /app/node_modules ./node_modules
