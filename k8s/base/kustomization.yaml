@@ -27,7 +27,6 @@ labels:
     pairs:
       platform.io/team: __TEAM_NAME__
       platform.io/cost-center: __COST_CENTER__
-      platform.io/environment: __ENVIRONMENT__
 images:
   - name: kuberpull/__SERVICE_NAME__
     newName: kuberpull/__SERVICE_NAME__
