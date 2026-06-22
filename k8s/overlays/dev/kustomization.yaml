@@ -9,6 +9,7 @@ labels:
     includeTemplates: true
     pairs:
       platform.ohanyere.io/environment: dev
+      platform.io/environment: dev
 patches:
   - path: rollout-patch.yaml
   - path: hpa-patch.yaml
