@@ -21,6 +21,7 @@ spec:
     spec:
       containers:
         - name: api
+          image: kuberpull/__SERVICE_NAME__:dev
           resources:
             requests:
               cpu: 200m

@@ -30,4 +30,4 @@ labels:
 images:
   - name: kuberpull/__SERVICE_NAME__
     newName: kuberpull/__SERVICE_NAME__
-    newTag: latest
+    newTag: dev

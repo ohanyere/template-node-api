@@ -51,7 +51,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: api
-          image: kuberpull/__SERVICE_NAME__:latest
+          image: kuberpull/__SERVICE_NAME__:dev
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
