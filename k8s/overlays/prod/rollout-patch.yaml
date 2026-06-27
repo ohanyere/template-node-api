@@ -19,6 +19,7 @@ spec:
         - setWeight: 100
   template:
     spec:
+      serviceAccountName: __SERVICE_NAME__-prod
       containers:
         - name: api
           image: kuberpull/__SERVICE_NAME__:dev
