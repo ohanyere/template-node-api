@@ -65,7 +65,7 @@ jobs:
   promote-dev:
     name: promote image to dev
     needs: policy-check
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.head_commit.message != 'chore: promote image to dev'
+    if: "${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.head_commit.message != 'chore: promote image to dev' }}"
     runs-on: ubuntu-latest
     permissions:
       contents: write
